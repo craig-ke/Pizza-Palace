@@ -89,7 +89,7 @@ meatzza.prototype.description=function(){
   return this.type + "," + this.size + "," + this.crust + "," + this.toppings
 }
 //Pizza pricing.
-var pizzaTypeP=function(){
+var pizzaTypePriceP=function(){
   var pizzaTypePrice;
   if (pizzaType === "Chicken Hawaiin"){
     pizzaTypePrice=500;
@@ -107,7 +107,7 @@ var pizzaTypeP=function(){
   return pizzaTypePrice
 }
 //increased size means more money,so
-var pizzaTypeP=function(){
+var pizzaSizePriceP=function(){
   var pizzaSizePrice;
   if (inputtedSize==="large"){
     pizzaSizePrice=600;
@@ -119,16 +119,55 @@ var pizzaTypeP=function(){
   return pizzaSizePrice
 }
 
-//addition payment based on crust
-var pizzaTypeP=function(){
+//addition payment based on crust.
+var pizzaCrustPriceP=function(){
   var pizzaCrustPrice;
   if (inputtedCrust=="Classic"){
     pizzaSizePrice=10;
   }else if (inputtedCrust=="Crispy"){
     pizzaSizePrice=15;
-  }else if (inputtedCrust=="Cheesy Crst"){
+  }else if (inputtedCrust=="Cheesy Crest"){
     pizzaSizePrice=20;
   }else if (inputtedCrust=="Glutton Free Base"){
      pizzaSizePrice=25;
   }
+}
+
+//addition payment based on toppings.
+var pizzaToppingPriceP = function () {
+
+  var pizzaToppingPrice;
+
+  if (inputtedSize === "Large" && inputtedTopping === "Pepperoni") {
+      pizzaToppingPrice = 40;
+  } else if (inputtedSize === "Large" && inputtedTopping === "Mushrooms") {
+      pizzaToppingPrice = 50;
+  } else if (inputtedSize === "Large" && inputtedTopping === "Onions") {
+      pizzaToppingPrice = 60;
+  } else if (inputtedSize === "Large" && inputtedTopping === "Extra Cheese") {
+      pizzaToppingPrice = 70;
+  } else if (inputtedSize === "Medium" && inputtedTopping === "Pepperoni") {
+      pizzaToppingPrice = 30;
+  } else if (inputtedSize === "Medium" && inputtedTopping === "Mushrooms") {
+      pizzaToppingPrice = 40;
+  } else if (inputtedSize === "Medium" && inputtedTopping === "Onions") {
+      pizzaToppingPrice = 50;
+  } else if (inputtedSize === "Medium" && inputtedTopping === "Extra Cheese") {
+      pizzaToppingPrice = 60;
+  } else if (inputtedSize === "Small" && inputtedTopping === "Pepperoni") {
+      pizzaToppingPrice = 20;
+  } else if (inputtedSize === "Small" && inputtedTopping === "Mushrooms") {
+      pizzaToppingPrice = 30;
+  } else if (inputtedSize === "Small" && inputtedTopping === "Onions") {
+      pizzaToppingPrice = 40;
+  } else if (inputtedSize === "Small" && inputtedTopping === "Extra Cheese") {
+      pizzaToppingPrice = 50;
+  }
+  return pizzaToppingPrice;
+}
+
+//Total Price
+var pizzaPriceP= function () {
+  pizzaPrice = pizzaSizePriceP() + pizzaToppingPriceP() + pizzaCrustPriceP() + pizzaTypePriceP();
+  return pizzaPrice;
 }
