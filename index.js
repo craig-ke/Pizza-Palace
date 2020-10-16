@@ -43,8 +43,17 @@ function bbqSteak(size,crust,toppings){
   this.toppings=toppings;
   this.type= "BBQ Steak";
 }
-
-//Chicken Tika
+bbqSteak.prototype.description=function(){
+  return this.type + "," + this.size + "," + this.crust + "," + this.toppings;
+}
+//Chicken Tikka
+function chickenTikka(size,crust,toppings){
+  this.size=size;
+  this.crust=crust;
+  this.toppings=toppings;
+  this.type="Chicen Tikka";
+}
 //Boerewors
+fun
 //Margheritta
 //Meatzza
