@@ -1,0 +1,31 @@
+.magnificent{
+  background-image: url(../Images/Pizaa1.jpeg);
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+}
+body {
+  text-align: center;
+  font-family: 'Righteous', cursive;
+  font-weight: bold;
+}
+.mega-text{
+  margin-top: 200px;
+}
+.mega-text h1{
+  font-size: 50px;
+}
+.mega-text img{
+  padding: 95px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+#nav-base{
+  text-align: center;
+}
