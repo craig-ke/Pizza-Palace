@@ -4,6 +4,8 @@ var inputtedCrust;
 var pizzaPrice;
 var pizzaType;
 var pizzaDescription;
+var pizzaCrustPrice
+var pizzaSizePrice
 var totalPrice = 0;
 var checkoutCount = 0;
 
@@ -85,4 +87,48 @@ function meatzza(size,crust,toppings){
 }
 meatzza.prototype.description=function(){
   return this.type + "," + this.size + "," + this.crust + "," + this.toppings
+}
+//Pizza pricing.
+var pizzaTypeP=function(){
+  var pizzaTypePrice;
+  if (pizzaType === "Chicken Hawaiin"){
+    pizzaTypePrice=500;
+  }else if(pizzaType ==="BBQ Steak"){
+    pizzaTypePrice=600;
+  }else if(pizzaType === "Chicken Tikka"){
+    pizzaTypePrice= 700;
+  }else if(pizzaType === "Boerewors"){
+    pizzaTypePrice= 800;
+  }else if(pizzaType === "Margheritta"){
+    pizzaTypePrice= 900;
+  }else if(pizzaType === "Meatzza"){
+    pizzaTypePrice= 1000;
+  }
+  return pizzaTypePrice
+}
+//increased size means more money,so
+var pizzaTypeP=function(){
+  var pizzaSizePrice;
+  if (inputtedSize==="large"){
+    pizzaSizePrice=600;
+  }else if(inputtedSize==="medium"){
+    pizzaSizePrice=400;
+  }else if (inputtedSize==="small"){
+    pizzaSizePrice=0
+  }
+  return pizzaSizePrice
+}
+
+//addition payment based on crust
+var pizzaTypeP=function(){
+  var pizzaCrustPrice;
+  if (inputtedCrust=="Classic"){
+    pizzaSizePrice=10;
+  }else if (inputtedCrust=="Crispy"){
+    pizzaSizePrice=15;
+  }else if (inputtedCrust=="Cheesy Crst"){
+    pizzaSizePrice=20;
+  }else if (inputtedCrust=="Glutton Free Base"){
+     pizzaSizePrice=25;
+  }
 }
