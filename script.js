@@ -19,7 +19,7 @@ $(document). ready( function() {
     inputtedTopping = $("#bbq_c-toppings").val();
     chickenHawaiinOrder = new chickenHawaiin(inputtedSize,inputtedCrust, inputtedTopping);
     pizzaType = chickenHawaiinOrder.type;
-    pizzaDescription = bbqSteakOrder.description();
+    pizzaDescription = chickenHawaiinOrder.description();
     $("#bbq_c-price").remove();
     $("#bbq_c-card").append("<div id='bbq_c-price'>" +
         "<p>" + pizzaPriceP() + "</p>" +
@@ -42,7 +42,7 @@ $(document). ready( function() {
         inputtedTopping = $("#bbq_s-toppings").val();
         inputtedCrust = $("#bbq_s-crust").val();
         bbqSteakOrder = new bbqSteak(inputtedSize, inputtedCrust, inputtedTopping);
-        pizzaType = bbqChickenTikkaOrder.type;
+        pizzaType = bbqSteakOrder.type;
         pizzaDescription = bbqSteakOrder.description();
         $("#bbq_s-price").remove();
         $("#bbq_s-card").append("<div id='bbq_s-price'>" +
@@ -90,8 +90,8 @@ $(document). ready( function() {
         inputtedTopping = $("#haw-toppings").val();
         inputtedCrust = $("#haw-crust").val();
         boereworsOrder = new boerewors(inputtedSize, inputtedCrust, inputtedTopping);
-        pizzaType = hawaiianOrder.type;
-        pizzaDescription = hawaiianOrder.description();
+        pizzaType = boereworsOrder.type;
+        pizzaDescription = boereworsOrder.description();
         $("#haw-price").remove();
         $("#haw-card").append("<div id='haw-price'>" +
             "<p>" + pizzaPriceP() + "</p>" +
@@ -145,7 +145,7 @@ $(document). ready( function() {
             "<p>" + pizzaPriceP() + "</p>" +
             "</div>");
         c = pizzaPriceP();
-    });
+    })
 
     $("#btn-mtz").click(function () {
         checkoutCount += 1
@@ -159,7 +159,7 @@ $(document). ready( function() {
 
 
      $("form").submit(function () {
-        event.preventDefault();
+         event.preventDefault();
         location.href = "checkout.html";
     });
 
