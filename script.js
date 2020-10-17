@@ -22,9 +22,9 @@ $(document). ready( function() {
     pizzaDescription = chickenHawaiinOrder.description();
     $("#bbq_c-price").remove();
     $("#bbq_c-card").append("<div id='bbq_c-price'>" +
-        "<p>" + pizzaPriceP() + "</p>" +
+        "<p>" + pizzaPriceF() + "</p>" +
         "</div>");
-    x = pizzaPriceP();
+    x = pizzaPriceF();
   })
 
   $("#btn-bbq_c").click(function () {
@@ -46,9 +46,9 @@ $(document). ready( function() {
         pizzaDescription = bbqSteakOrder.description();
         $("#bbq_s-price").remove();
         $("#bbq_s-card").append("<div id='bbq_s-price'>" +
-            "<p>" + pizzaPriceP() + "</p>" +
+            "<p>" + pizzaPriceF() + "</p>" +
             "</div>");
-        y = pizzaPriceP();
+        y = pizzaPriceF();
     })
 
     $("#btn-bbq_s").click(function () {
@@ -65,14 +65,14 @@ $(document). ready( function() {
         inputtedSize = $("#chk_tk-size").val();
         inputtedTopping = $("#chk_tk-toppings").val();
         inputtedCrust = $("#chk_tk-crust").val();
-        chickenTikkaOrder = new chickenTikkaPizza(inputtedSize, inputtedCrust, inputtedTopping);
+        chickenTikkaOrder = new chickenTikka(inputtedSize, inputtedCrust, inputtedTopping);
         pizzaType = chickenTikkaOrder.type;
         pizzaDescription = chickenTikkaOrder.description();
         $("#chk_tk-price").remove();
         $("#chk_tk-card").append("<div id='chk_tk-price'>" +
-            "<p>" + pizzaPriceP() + "</p>" +
+            "<p>" + pizzaPriceF() + "</p>" +
             "</div>");
-        z = pizzaPriceP();
+        z = pizzaPriceF();
     })
 
     $("#btn-chk_tk").click(function () {
@@ -94,9 +94,9 @@ $(document). ready( function() {
         pizzaDescription = boereworsOrder.description();
         $("#haw-price").remove();
         $("#haw-card").append("<div id='haw-price'>" +
-            "<p>" + pizzaPriceP() + "</p>" +
+            "<p>" + pizzaPriceF() + "</p>" +
             "</div>");
-        a = pizzaPriceP();
+        a = pizzaPriceF();
     })
 
     $("#btn-haw").click(function () {
@@ -113,14 +113,14 @@ $(document). ready( function() {
         inputtedSize = $("#margh-size").val();
         inputtedTopping = $("#margh-toppings").val();
         inputtedCrust = $("#margh-crust").val();
-        margheritaOrder = new margheritta(inputtedSize, inputtedCrust, inputtedTopping);
+        margheritaOrder = new margherita(inputtedSize, inputtedCrust, inputtedTopping);
         pizzaType = margheritaOrder.type;
         pizzaDescription = margheritaOrder.description();
         $("#margh-price").remove();
         $("#margh-card").append("<div id='margh-price'>" +
-            "<p>" + pizzaPriceP() + "</p>" +
+            "<p>" + pizzaPriceF() + "</p>" +
             "</div>");
-        b = pizzaPriceP();
+        b = pizzaPriceF();
     })
 
     $("#btn-margh").click(function () {
@@ -142,10 +142,10 @@ $(document). ready( function() {
         pizzaDescription = meatzzaOrder.description();
         $("#mtz-price").remove();
         $("#mtz-card").append("<div id='mtz-price'>" +
-            "<p>" + pizzaPriceP() + "</p>" +
+            "<p>" + pizzaPriceF() + "</p>" +
             "</div>");
-        c = pizzaPriceP();
-    })
+        c = pizzaPriceF();
+    });
 
     $("#btn-mtz").click(function () {
         checkoutCount += 1
@@ -159,7 +159,7 @@ $(document). ready( function() {
 
 
      $("form").submit(function () {
-         event.preventDefault();
+        event.preventDefault();
         location.href = "checkout.html";
     });
 
