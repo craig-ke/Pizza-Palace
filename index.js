@@ -9,11 +9,6 @@ var pizzaSizePrice
 var totalPrice = 0;
 var checkoutCount = 0;
 
-var bbqCPreferences = [];
-var bbqCPrices = [];
-var bbqSPreferences = [];
-var bbqSPrices = [];
-
 //chicken Hawaiin
 function chickenHawaiin(size,crust,toppings){
   this.size=size;
@@ -34,6 +29,7 @@ function bbqSteak(size,crust,toppings){
 }
 bbqSteak.prototype.description=function(){
   return this.type + "," + this.size + "," + this.crust + "," + this.toppings;
+
 }
 //Chicken Tikka
 function chickenTikka(size,crust,toppings){
