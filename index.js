@@ -88,7 +88,7 @@ function meatzza(size,crust,toppings){
 meatzza.prototype.description=function(){
   return this.type + "," + this.size + "," + this.crust + "," + this.toppings
 }
-//Pizza pricing.
+//Normal Pizza pricing.
 var pizzaTypePriceP=function(){
   var pizzaTypePrice;
   if (pizzaType === "Chicken Hawaiin"){
@@ -123,13 +123,13 @@ var pizzaSizePriceP=function(){
 var pizzaCrustPriceP=function(){
   var pizzaCrustPrice;
   if (inputtedCrust=="Classic"){
-    pizzaSizePrice=10;
+    pizzaCrustPrice=10;
   }else if (inputtedCrust=="Crispy"){
-    pizzaSizePrice=15;
+    pizzaCrustPrice=15;
   }else if (inputtedCrust=="Cheesy Crest"){
-    pizzaSizePrice=20;
+    pizzaCrustPrice=20;
   }else if (inputtedCrust=="Glutton Free Base"){
-     pizzaSizePrice=25;
+     pizzaCrustPrice=25;
   }
 }
 
@@ -171,3 +171,5 @@ var pizzaPriceP= function () {
   pizzaPrice = pizzaSizePriceP() + pizzaToppingPriceP() + pizzaCrustPriceP() + pizzaTypePriceP();
   return pizzaPrice;
 }
+
+$Documnt.pizza
