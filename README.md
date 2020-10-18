@@ -21,4 +21,5 @@ link to live site
 ## Known Bugs
 No bugs
 ## Authors info
-* CONTACTS:+254712242490; lawrence.olonyi.67@gmail.com .
+* CONTACTS:+254712242490;
+ lawrence.olonyi.67@gmail.com .
